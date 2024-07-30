@@ -14,12 +14,21 @@ mkdir -p "$DOTFILES_DIR"
 # Function to move configuration to dotfiles directory
 move_config() {
     local source="$HOME/$1"
-    local dest="$DOTFILES_DIR/$(basename "$1")"
+    local target_dir="$DOTFILES_DIR"
+    
+    if [ -n "$2" ]; then
+        target_dir="$DOTFILES_DIR/$2"
+    fi
+
+    local dest="$target_dir/$(basename "$1")"
+    
+    mkdir -p "$target_dir"
+    
     if [ ! -e "$dest" ]; then
         mv "$source" "$dest"
-        echo "Moved $1 to dotfiles directory"
+        echo "Moved $1 to $target_dir"
     else
-        echo "$1 already in dotfiles directory"
+        echo "$1 already in $target_dir"
     fi
 }
 
@@ -37,11 +46,14 @@ create_symlink() {
 }
 
 # Move and symlink configurations
-move_config ".config/kitty"
-create_symlink "kitty" ".config/kitty"
+# move_config ".config/kitty" "configs"
+# create_symlink "configs/kitty" ".config/kitty"
+#
+# move_config ".config/lazygit" "configs"
+# create_symlink "configs/lazygit" ".config/lazygit"
 
-move_config ".config/lazygit"
-create_symlink "lazygit" ".config/lazygit"
+move_config ".bashrc" "shell"
+create_symlink "shell/.bashrc" ".bashrc"
 
 # mv ~/.gitconfig "$DOTFILES_DIR/gitconfig"
 # create_symlink "gitconfig" ".gitconfig"
