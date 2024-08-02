@@ -52,8 +52,12 @@ create_symlink() {
 # move_config ".config/lazygit" "configs"
 # create_symlink "configs/lazygit" ".config/lazygit"
 
-move_config ".bashrc" "shell"
-create_symlink "shell/.bashrc" ".bashrc"
+# move_config ".bashrc" "shell"
+# create_symlink "shell/.bashrc" ".bashrc"
+#
+# move_config ".config/rofi" "configs"
+create_symlink "rofi" ".config/rofi"
+
 
 # mv ~/.gitconfig "$DOTFILES_DIR/gitconfig"
 # create_symlink "gitconfig" ".gitconfig"
