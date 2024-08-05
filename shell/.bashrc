@@ -129,7 +129,7 @@ export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
-export PATH=$PATH:~/apps/:/usr/local/go/bin:/home/emanuel/.local/bin:/home/emanuel/apps/yazi/
+export PATH=$PATH:~/apps/:/usr/local/go/bin:/home/emanuel/.local/bin:/home/emanuel/apps/yazi/:/home/emanuel/apps/gibo_Linux_x86_64/
 
 alias dl=dolphin
 alias lz=lazygit
