@@ -58,6 +58,9 @@ create_symlink() {
 # move_config ".config/rofi" "configs"
 # create_symlink "rofi" ".config/rofi"
 
+move_config ".config/dunst" "dunst"
+create_symlink "dunst" ".config/dunst"
+
 #move_config ".config/rofi" "configs"
 create_symlink "dunst" ".config/dunst"
 
