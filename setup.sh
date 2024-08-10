@@ -56,7 +56,10 @@ create_symlink() {
 # create_symlink "shell/.bashrc" ".bashrc"
 #
 # move_config ".config/rofi" "configs"
-create_symlink "rofi" ".config/rofi"
+# create_symlink "rofi" ".config/rofi"
+
+move_config ".config/dunst" "dunst"
+create_symlink "dunst" ".config/dunst"
 
 
 # mv ~/.gitconfig "$DOTFILES_DIR/gitconfig"

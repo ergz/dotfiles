@@ -19,4 +19,5 @@ configuration {
     window-format:              "{w} · {c} · {t}";
 }
 
-@theme "Arc-Dark"
+//@theme "Arc-Dark"
+@theme "~/.config/rofi/tokyo-night-theme.rasi"

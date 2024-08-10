@@ -1,0 +1,95 @@
+configuration {
+  font: "SauceCodePro Nerd Font Mono 18";
+
+  drun {
+    display-name: "";
+  }
+
+  run {
+    display-name: "";
+  }
+
+  window {
+    display-name: "";
+  }
+
+  timeout {
+    delay: 30;
+    action: "kb-cancel";
+  }
+}
+
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+
+  bg: #1a1b26;
+  bg-alt: #232433;
+  fg: #6a6f87;
+  fg-alt: #a9b1d6;
+  purp: #9d7cd8;
+  red: #c53b53;
+  yellow: #ffc777;
+  cyan: #7dcfff;
+
+  background-color: @bg;
+  text-color: @fg;
+}
+
+window {
+  transparency: "real";
+  width: 1100px;
+}
+
+mainbox {
+  children: [inputbar, listview];
+}
+
+inputbar {
+  background-color: @bg-alt;
+  children: [prompt, entry];
+    border: 1 1 0 1;
+    border-color: @cyan;
+}
+
+entry {
+    text-color: white;
+  background-color: inherit;
+  padding: 12px 3px;
+}
+
+prompt {
+  background-color: inherit;
+  text-color: white;
+  padding: 12px;
+}
+
+listview {
+  lines: 8;
+  border: 0 1 1 1;
+  border-color: @cyan;
+}
+
+element {
+  children: [element-icon, element-text];
+}
+
+element-icon {
+  padding: 10px 10px;
+  size: 20px;
+}
+
+element-text {
+  padding: 10px 0;
+}
+
+element-text selected {
+  text-color: white;
+  background-color: #3d59a1;
+}
+
+element-icon selected {
+background-color: #3d59a1;
+}
