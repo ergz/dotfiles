@@ -47,20 +47,22 @@ create_symlink() {
 
 # Move and symlink configurations
 # move_config ".config/kitty" "configs"
-# create_symlink "configs/kitty" ".config/kitty"
+# create_symlink "kitty" ".config/kitty"
 #
 # move_config ".config/lazygit" "configs"
 # create_symlink "configs/lazygit" ".config/lazygit"
 
 # move_config ".bashrc" "shell"
 # create_symlink "shell/.bashrc" ".bashrc"
-#
+# #
 # move_config ".config/rofi" "configs"
 # create_symlink "rofi" ".config/rofi"
 
 move_config ".config/dunst" "dunst"
 create_symlink "dunst" ".config/dunst"
 
+#move_config ".config/rofi" "configs"
+create_symlink "dunst" ".config/dunst"
 
 # mv ~/.gitconfig "$DOTFILES_DIR/gitconfig"
 # create_symlink "gitconfig" ".gitconfig"
