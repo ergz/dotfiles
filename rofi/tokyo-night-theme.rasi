@@ -1,16 +1,16 @@
 configuration {
-  font: "SauceCodePro Nerd Font Mono 18";
+  font: "ComicCode Nerd Font 18";
 
   drun {
-    display-name: "";
+    display-name: "d";
   }
 
   run {
-    display-name: "";
+    display-name: "r";
   }
 
   window {
-    display-name: "";
+    display-name: "w";
   }
 
   timeout {

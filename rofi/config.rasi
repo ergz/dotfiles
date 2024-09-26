@@ -2,7 +2,7 @@ configuration {
     modi: "drun,run,calc,window";
     lines: 15;
     columns: 2;
-    font: "SauceCodePro Nerd Font Mono 18";
+    font: "ComicCode Nerd Font 18";
     bw: 1;
     location: 0;
     padding: 5;
@@ -10,11 +10,11 @@ configuration {
     show-icons: true;
     terminal: "kitty";
     icon-theme: "Papirus";
-    display-drun:               " drun";
-    display-run:                " run";
-    display-filebrowser:        " files";
-    display-window:             " window";
-    display-calc:               "🖩 calculate";
+    display-drun:               "drun";
+    display-run:                "run";
+    display-filebrowser:        "files";
+    display-window:             "window";
+    display-calc:               "calc";
     drun-display-format:        "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
     window-format:              "{w} · {c} · {t}";
 }
