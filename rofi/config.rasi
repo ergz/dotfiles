@@ -10,11 +10,11 @@ configuration {
     show-icons: true;
     terminal: "kitty";
     icon-theme: "Papirus";
-    display-drun:               "drun";
-    display-run:                "run";
-    display-filebrowser:        "files";
-    display-window:             "window";
-    display-calc:               "calc";
+   display-drun:               " drun";
+    display-run:                " run";
+    display-filebrowser:        " files";
+    display-window:             " window";
+    display-calc:               "🖩 calculate";
     drun-display-format:        "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
     window-format:              "{w} · {c} · {t}";
 }
