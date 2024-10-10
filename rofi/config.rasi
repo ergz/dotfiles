@@ -10,7 +10,7 @@ configuration {
     show-icons: true;
     terminal: "kitty";
     icon-theme: "Papirus";
-   display-drun:               " drun";
+    display-drun:               " drun";
     display-run:                " run";
     display-filebrowser:        " files";
     display-window:             " window";
@@ -19,5 +19,7 @@ configuration {
     window-format:              "{w} · {c} · {t}";
 }
 
-//@theme "Arc-Dark"
-@theme "~/.config/rofi/tokyo-night-theme.rasi"
+@theme "Arc-Dark"
+//@theme "~/.config/rofi/tokyo-night-theme.rasi"
+//@theme "/usr/share/rofi/themes/DarkBlue.rasi"
+//@theme "/usr/share/rofi/themes/tokyonight.rasi"
