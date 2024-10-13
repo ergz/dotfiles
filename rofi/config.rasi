@@ -25,3 +25,4 @@ configuration {
 //@theme "/usr/share/rofi/themes/tokyonight.rasi"
 //@theme "/usr/share/rofi/themes/DarkBlue.rasi"
 @theme "./squared-nord.rasi"
+//@theme "./nord-oneline.rasi"
