@@ -1,5 +1,5 @@
 configuration {
-    modi: "drun,run,calc,window";
+    modi: "drun,run,window";
     lines: 15;
     columns: 2;
     font: "ComicCode Nerd Font 18";
@@ -19,7 +19,10 @@ configuration {
     window-format:              "{w} · {c} · {t}";
 }
 
-@theme "Arc-Dark"
+//@theme "Arc-Dark"
 //@theme "~/.config/rofi/tokyo-night-theme.rasi"
 //@theme "/usr/share/rofi/themes/DarkBlue.rasi"
 //@theme "/usr/share/rofi/themes/tokyonight.rasi"
+//@theme "/usr/share/rofi/themes/DarkBlue.rasi"
+@theme "./squared-nord.rasi"
+//@theme "./nord-oneline.rasi"
