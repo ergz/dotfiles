@@ -1,5 +1,54 @@
 git:
   paging:
     colorArg: always
-    pager: delta --paging=never 
+    pager: delta --paging=never
 
+gui:
+  theme:
+    activeBorderColor:
+      - "#7aa2f7" # Light blue
+      - bold
+    inactiveBorderColor:
+      - "#565f89" # Muted blue
+    optionsTextColor:
+      - "#7aa2f7" # Light blue
+    selectedLineBgColor:
+      - "#3b4261" # Dark blue-gray
+    selectedRangeBgColor:
+      - "#3b4261" # Dark blue-gray
+    cherryPickedCommitBgColor:
+      - "#3b4261" # Dark blue-gray
+    cherryPickedCommitFgColor:
+      - "#7aa2f7" # Light blue
+    unstagedChangesColor:
+      - "#f7768e" # Pink/red
+    defaultFgColor:
+      - "#c0caf5" # Light gray-blue (text)
+    searchingActiveBorderColor:
+      - "#ff9e64" # Orange
+    standardBorderColor:
+      - "#1a1b26" # Dark background
+    statusTimeColor:
+      - "#1abc9c" # Cyan
+    commitInfoBackgroundColor:
+      - "#1a1b26" # Dark background
+    menuSelectedFgColor:
+      - "#c0caf5" # Light gray-blue
+    menuSelectedBgColor:
+      - "#343a55" # Darker blue-gray
+    pullRequestIconColor:
+      - "#ff9e64" # Orange
+    diffAddColor:
+      - "#9ece6a" # Green
+    diffRemoveColor:
+      - "#f7768e" # Pink/red
+    diffChangeColor:
+      - "#e0af68" # Yellow
+    wordDiffAddColor:
+      - "#41a6b5" # Teal
+    wordDiffRemoveColor:
+      - "#db4b4b" # Bright red
+    branchColor:
+      - "#bb9af7" # Purple
+    tagColor:
+      - "#e0af68" # Yellow
