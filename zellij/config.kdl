@@ -1,0 +1,32 @@
+keybinds {
+    normal {
+        // Pane keybindings
+        bind "Ctrl p" { SwitchToMode "pane"; }
+        bind "Ctrl n" { NewPane; }
+        bind "Ctrl h" { MoveFocusOrTab "Left"; }
+        bind "Ctrl l" { MoveFocusOrTab "Right"; }
+        bind "Ctrl j" { MoveFocus "Down"; }
+        bind "Ctrl k" { MoveFocus "Up"; }
+        unbind "Ctrl s"
+        unbind "Alt ["
+        unbind "Alt ]"
+    }
+    pane {
+        bind "h" { MovePane "Left"; }
+        bind "j" { MovePane "Down"; }
+        bind "k" { MovePane "Up"; }
+        bind "l" { MovePane "Right"; }
+        bind "Enter" "Esc" { SwitchToMode "normal"; }
+    }
+}
+
+// Appearance settings
+theme "dracula"
+default_layout "main-on-right"
+
+// Other settings
+pane_frames true
+auto_layout true
+
+
+session_serialization true
