@@ -3,8 +3,8 @@ keybinds {
         // Pane keybindings
         bind "Ctrl p" { SwitchToMode "pane"; }
         bind "Ctrl n" { NewPane; }
-        bind "Ctrl h" { MoveFocusOrTab "Left"; }
-        bind "Ctrl l" { MoveFocusOrTab "Right"; }
+        bind "Ctrl h" { MoveFocus "Left"; }
+        bind "Ctrl l" { MoveFocus "Right"; }
         bind "Ctrl j" { MoveFocus "Down"; }
         bind "Ctrl k" { MoveFocus "Up"; }
         unbind "Ctrl s"
@@ -21,12 +21,20 @@ keybinds {
 }
 
 // Appearance settings
-theme "dracula"
+theme "cyber-noir"
 default_layout "main-on-right"
 
 // Other settings
 pane_frames true
 auto_layout true
+
+ui {
+    pane_frames {
+        rounded_corners false
+        hide_session_name true
+
+    }
+}
 
 
 session_serialization true
