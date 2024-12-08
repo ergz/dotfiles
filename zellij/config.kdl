@@ -10,6 +10,7 @@ keybinds {
         unbind "Ctrl s"
         unbind "Alt ["
         unbind "Alt ]"
+        unbind "Alt l"
     }
     pane {
         bind "h" { MovePane "Left"; }
@@ -17,8 +18,16 @@ keybinds {
         bind "k" { MovePane "Up"; }
         bind "l" { MovePane "Right"; }
         bind "Enter" "Esc" { SwitchToMode "normal"; }
+        bind "Ctrl Tab" { GoToNextTab; }
+        bind "Ctrl Shift Tab" { GoToPreviousTab; }
+
     }
+    shared_except "locked" {
+        bind "Ctrl Tab" { GoToNextTab; }
+        bind "Ctrl Shift Tab" { GoToPreviousTab; }
+      }
 }
+
 
 // Appearance settings
 theme "cyber-noir"
@@ -30,8 +39,8 @@ auto_layout true
 
 ui {
     pane_frames {
-        rounded_corners false
-        hide_session_name true
+        rounded_corners true
+        hide_session_name false
 
     }
 }
