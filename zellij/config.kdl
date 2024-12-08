@@ -1,0 +1,49 @@
+keybinds {
+    normal {
+        // Pane keybindings
+        bind "Ctrl p" { SwitchToMode "pane"; }
+        bind "Ctrl n" { NewPane; }
+        bind "Ctrl h" { MoveFocus "Left"; }
+        bind "Ctrl l" { MoveFocus "Right"; }
+        bind "Ctrl j" { MoveFocus "Down"; }
+        bind "Ctrl k" { MoveFocus "Up"; }
+        unbind "Ctrl s"
+        unbind "Alt ["
+        unbind "Alt ]"
+        unbind "Alt l"
+    }
+    pane {
+        bind "h" { MovePane "Left"; }
+        bind "j" { MovePane "Down"; }
+        bind "k" { MovePane "Up"; }
+        bind "l" { MovePane "Right"; }
+        bind "Enter" "Esc" { SwitchToMode "normal"; }
+        bind "Ctrl Tab" { GoToNextTab; }
+        bind "Ctrl Shift Tab" { GoToPreviousTab; }
+
+    }
+    shared_except "locked" {
+        bind "Ctrl Tab" { GoToNextTab; }
+        bind "Ctrl Shift Tab" { GoToPreviousTab; }
+      }
+}
+
+
+// Appearance settings
+theme "cyber-noir"
+default_layout "main-on-right"
+
+// Other settings
+pane_frames true
+auto_layout true
+
+ui {
+    pane_frames {
+        rounded_corners true
+        hide_session_name false
+
+    }
+}
+
+
+session_serialization true
