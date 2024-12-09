@@ -3,7 +3,7 @@ keybinds {
         // Pane keybindings
         bind "Ctrl p" { SwitchToMode "pane"; }
         bind "Ctrl n" { NewPane; }
-        bind "Ctrl h" { MoveFocus "Left"; }
+        //bind "Ctrl h" { MoveFocus "Left"; }
         bind "Ctrl l" { MoveFocus "Right"; }
         bind "Ctrl j" { MoveFocus "Down"; }
         bind "Ctrl k" { MoveFocus "Up"; }
@@ -11,6 +11,9 @@ keybinds {
         unbind "Alt ["
         unbind "Alt ]"
         unbind "Alt l"
+        unbind "Alt j"
+        unbind "Alt k"
+        unbind "Ctrl h"
     }
     pane {
         bind "h" { MovePane "Left"; }
@@ -23,14 +26,14 @@ keybinds {
 
     }
     shared_except "locked" {
-        bind "Ctrl Tab" { GoToNextTab; }
-        bind "Ctrl Shift Tab" { GoToPreviousTab; }
+        bind "Alt PageDown" { GoToNextTab; }
+        bind "Alt PageUp" { GoToPreviousTab; }
       }
 }
 
 
 // Appearance settings
-theme "cyber-noir"
+theme "dracula"
 default_layout "main-on-right"
 
 // Other settings

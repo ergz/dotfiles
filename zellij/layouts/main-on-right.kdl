@@ -1,10 +1,10 @@
 layout {
     pane split_direction="vertical" {
         pane split_direction="horizontal" size="30%" {
-            pane cwd="~/dev"
-            pane cwd="~/dev"
+            pane cwd="~"
+            pane cwd="~"
         }
-        pane size="70%" focus=true cwd="~/dev"
+        pane size="70%" focus=true cwd="~"
     }
     pane size=1 borderless=true {
         plugin location="zellij:tab-bar"
