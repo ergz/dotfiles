@@ -123,16 +123,16 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
-export PATH=$PATH:~/apps/:/usr/local/go/bin:/home/emanuel/.local/bin:/home/emanuel/apps/yazi/:/home/emanuel/apps/gibo_Linux_x86_64/:~/Applications/
+export PATH=$PATH:~/apps/:/usr/local/go/bin:/home/emanuel/.local/bin:/home/emanuel/apps/yazi/:/home/emanuel/apps/gibo_Linux_x86_64/:~/Applications/:/opt/nvim-linux64/bin/
 
 alias dl=dolphin
 alias lz=lazygit
 alias yz=yazi
+alias tl=tailscale
+alias nn=nvim
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # . "$HOME/.cargo/env"
+#
+export PROMPT_DIRTRIM=2
