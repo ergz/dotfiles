@@ -30,7 +30,7 @@ keybinds {
 
 
 // Appearance settings
-theme "cyber-noir"
+theme "dracula"
 default_layout "main-on-right"
 
 // Other settings

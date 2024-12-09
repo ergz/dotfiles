@@ -130,6 +130,8 @@ alias lz=lazygit
 alias yz=yazi
 alias tl=tailscale
 alias nn=nvim
+alias cls='clear'
+alias dir='ls'
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
