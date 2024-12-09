@@ -26,8 +26,8 @@ keybinds {
 
     }
     shared_except "locked" {
-        bind "Alt PageDown" { GoToNextTab; }
-        bind "Alt PageUp" { GoToPreviousTab; }
+        bind "Alt Shift Right" { GoToNextTab; }
+        bind "Alt Shift Left" { GoToPreviousTab; }
       }
 }
 
