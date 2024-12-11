@@ -7,7 +7,12 @@ keybinds {
         bind "Ctrl l" { MoveFocus "Right"; }
         bind "Ctrl j" { MoveFocus "Down"; }
         bind "Ctrl k" { MoveFocus "Up"; }
+        bind "Alt Right" { MoveFocus "Right"; }
+        bind "Alt Left" { MoveFocus "Left"; }
+        bind "Alt Shift f" { ToggleFocusFullscreen; }
+
         unbind "Ctrl s"
+        unbind "Ctrl l"
         unbind "Alt ["
         unbind "Alt ]"
         unbind "Alt l"
@@ -35,6 +40,7 @@ keybinds {
 // Appearance settings
 theme "dracula"
 default_layout "main-on-right"
+new_tab_template "two-pane"
 
 // Other settings
 pane_frames true
