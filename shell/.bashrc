@@ -60,10 +60,15 @@ get_git_branch() {
   git branch 2>/dev/null | sed -n 's/^\* \(.*\)/(\1)/p'
 }
 
+# if [ "$color_prompt" = yes ]; then
+#   PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[33m\] $(get_git_branch)\[\033[00m\]\$ '
+# else
+#   PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\[\033[33m\] $(get_git_branch)\[\033[00m\]\$ '
+# fi
 if [ "$color_prompt" = yes ]; then
-  PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[33m\] $(get_git_branch)\[\033[00m\]\$ '
+  PS1='\[\033[01;32m\]\u\[\033[00m\] \[\033[01;34m\]\w\[\033[00m\]\[\033[01;33m\]$(get_git_branch)\[\033[00m\] ~> '
 else
-  PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\[\033[33m\] $(get_git_branch)\[\033[00m\]\$ '
+  PS1='\u \w$(get_git_branch) ~> '
 fi
 unset color_prompt force_color_prompt
 
@@ -132,9 +137,21 @@ alias tl=tailscale
 alias nn=nvim
 alias cls='clear'
 alias dir='ls'
+alias zj='zellij'
+alias zl='zellij'
+alias sl3='sqlite3'
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # . "$HOME/.cargo/env"
 #
-export PROMPT_DIRTRIM=2
+export PROMPT_DIRTRIM=1
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# fly.io
+export FLYCTL_INSTALL="/home/emanuel/.fly"
+export PATH="$FLYCTL_INSTALL/bin:$PATH"
+function gi() { curl -sL https://www.toptal.com/developers/gitignore/api/$@; }
