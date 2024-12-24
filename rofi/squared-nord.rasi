@@ -4,8 +4,9 @@
  * Theme Repo           : https://github.com/lr-tech/rofi-themes-collection
  *******************************************************************************/
 
+
 * {
-    font:   "Iosevka Nerd Font Mono 20";
+    font:   "MonoLisa No Script Basic 20";
 
     bg0:     #2E3440;
     bg1:     #3B4252;

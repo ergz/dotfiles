@@ -68,6 +68,8 @@ create_symlink() {
 # create_symlink "gitconfig" ".gitconfig"
 #
 #
-create_symlink "zellij" ".config/zellij"
+create_symlink "kitty" ".config/kitty"
+create_symlink "rofi" ".config/rofi"
+
 
 echo "Dotfiles setup complete!"
