@@ -11,10 +11,10 @@
 configuration {
 	modi:                       "drun,run";
     show-icons:                 true;
-    display-drun:               " Apps";
-    display-run:                " Run";
-    //display-filebrowser:        " Files";
-    //display-window:             " Windows";
+    display-drun:               "󰀻 Apps";
+    display-run:                " Run";
+    //display-filebrowser:        "Files";
+    //display-window:             "Windows";
 	drun-display-format:        "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
 	window-format:              "{w} · {c} · {t}";
 }
@@ -133,7 +133,7 @@ entry {
     text-color:                  inherit;
     cursor:                      text;
     placeholder:                 "Search...";
-    placeholder-color:           inherit;
+    placeholder-color:           #858585;
 }
 num-filtered-rows {
     enabled:                     true;
