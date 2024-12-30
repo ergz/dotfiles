@@ -155,3 +155,8 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export FLYCTL_INSTALL="/home/emanuel/.fly"
 export PATH="$FLYCTL_INSTALL/bin:$PATH"
 function gi() { curl -sL https://www.toptal.com/developers/gitignore/api/$@; }
+
+# Z
+. ~/tools/z/z.sh
+
+alias goto='cd **'
