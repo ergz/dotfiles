@@ -66,7 +66,7 @@ get_git_branch() {
 #   PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\[\033[33m\] $(get_git_branch)\[\033[00m\]\$ '
 # fi
 if [ "$color_prompt" = yes ]; then
-  PS1='\[\033[01;32m\]\u\[\033[00m\] \[\033[01;34m\]\w\[\033[00m\]\[\033[01;33m\]$(get_git_branch)\[\033[00m\] ~> '
+  PS1='\[\033[32m\]\u\[\033[00m\] \[\033[34m\]\w\[\033[00m\]\[\033[33m\]$(get_git_branch)\[\033[00m\] ~> '
 else
   PS1='\u \w$(get_git_branch) ~> '
 fi
@@ -155,3 +155,10 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export FLYCTL_INSTALL="/home/emanuel/.fly"
 export PATH="$FLYCTL_INSTALL/bin:$PATH"
 function gi() { curl -sL https://www.toptal.com/developers/gitignore/api/$@; }
+
+# Z
+. ~/tools/z/z.sh
+
+alias goto='cd **'
+
+export PATH=$PATH:~/tools/zig-linux-x86_64-0.13.0
