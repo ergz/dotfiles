@@ -157,8 +157,10 @@ export PATH="$FLYCTL_INSTALL/bin:$PATH"
 function gi() { curl -sL https://www.toptal.com/developers/gitignore/api/$@; }
 
 # Z
-. ~/tools/z/z.sh
+# . ~/tools/z/z.sh
 
 alias goto='cd **'
 
 export PATH=$PATH:~/tools/zig-linux-x86_64-0.13.0
+
+eval "$(zoxide init bash)"
