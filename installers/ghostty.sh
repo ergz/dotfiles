@@ -1,4 +1,6 @@
 #!/bin/bash
+sudo apt install libgtk-4-dev libadwaita-1-dev git
+
 set -e
 cd /tmp
 [ -d "ghostty" ] && rm -rf ghostty

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sudo apt update
-sudo apt install build-essentials
+sudo apt install build-essential
 
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
 sudo rm -rf /opt/nvim
