@@ -1,0 +1,18 @@
+# font-family = "MonoLisa No Script Basic"
+font-family = "tx-02 Condensed"
+font-family-bold = "tx-02 Bold Condensed"
+font-family-italic = "tx-02 Condensed Oblique"
+font-family-bold-italic = "tx-02 Bold Condensed Oblique"
+font-size = 23
+theme = "Tomorrow Night"
+shell-integration = bash
+
+
+keybind = ctrl+a=new_split:right
+keybind = alt+right=goto_split:right
+keybind = alt+left=goto_split:left
+keybind = ctrl+shift+s>right=new_split:right
+keybind = ctrl+shift+s>left=new_split:left
+keybind = ctrl+shift+s>up=new_split:up
+keybind = ctrl+shift+s>down=new_split:down
+
