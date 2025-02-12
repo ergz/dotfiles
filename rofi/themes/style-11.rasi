@@ -21,7 +21,7 @@ configuration {
 
 /*****----- Global Properties -----*****/
 * {
-    font: "MonoLisa No Script Basic 18"; 
+    font: "TX-02 20"; 
     background:     #15161EFF;
     background-alt: #1A1B26FF;
     foreground:     #C0CAF5FF;
