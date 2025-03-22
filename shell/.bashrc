@@ -141,6 +141,7 @@ alias zj='zellij'
 alias zl='zellij'
 alias sl3='sqlite3'
 
+alias conda-start='eval "$(/home/emanuel/miniconda3/bin/conda shell.bash hook)"'
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # . "$HOME/.cargo/env"
