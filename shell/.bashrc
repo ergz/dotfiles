@@ -140,6 +140,7 @@ alias dir='ls'
 alias zj='zellij'
 alias zl='zellij'
 alias sl3='sqlite3'
+alias n=nvim
 
 alias conda-start='eval "$(/home/emanuel/miniconda3/bin/conda shell.bash hook)"'
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
@@ -162,6 +163,6 @@ function gi() { curl -sL https://www.toptal.com/developers/gitignore/api/$@; }
 
 alias goto='cd **'
 
-export PATH=$PATH:~/tools/zig-linux-x86_64-0.13.0
+export PATH=$PATH:~/tools/zig
 
 eval "$(zoxide init bash)"
