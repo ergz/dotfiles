@@ -48,7 +48,7 @@ shell-integration=bash
 shell-integration-features = no-cursor
 
 theme = 0x96f
-adw-toolbar-style = raised
+adw-toolbar-style = raised-border
 
 keybind = alt+up=goto_split:up
 keybind = alt+down=goto_split:down
@@ -57,3 +57,8 @@ keybind = alt+right=goto_split:right
 
 keybind = ctrl+shift+left=resize_split:left,10
 keybind = ctrl+shift+right=resize_split:right,10
+
+keybind = ctrl+shift+0=reset_font_size
+
+
+
