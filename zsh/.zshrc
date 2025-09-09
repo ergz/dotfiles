@@ -2,7 +2,7 @@ autoload -U colors && colors
 
 PROMPT='%F{green}%n@%m%f:%F{blue}%2~%f$ '
 
-export PATH="$PATH:$HOME/nvim-macos-arm64/bin:$HOME/.local/bin:$HOME/apps/fd:$HOME/apps/rg:$HOME/apps/bat"
+export PATH="$PATH:$HOME/nvim-macos-arm64/bin:$HOME/.local/bin:$HOME/tools/fd:$HOME/tools/rg:$HOME/tools/bat"
 alias ls='ls -G'
 source <(fzf --zsh)
 
