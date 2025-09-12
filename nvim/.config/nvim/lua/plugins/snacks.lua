@@ -167,6 +167,13 @@ return {
   },
   keys = {
     {
+      "<D-\\>",
+      function()
+        Snacks.picker.explorer({ cwd = LazyVim.root() })
+      end,
+      desc = "Explorer Snacks (root dir)",
+    },
+    {
       "<A-\\>",
       function()
         Snacks.picker.explorer({ cwd = LazyVim.root() })
