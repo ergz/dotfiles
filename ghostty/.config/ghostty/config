@@ -23,6 +23,7 @@ font-family = "Berkeley Mono"
 font-size = 26
 shell-integration-features=no-cursor
 theme=cyberdream
+
 # window-padding-x = 2
 #
 # # Spacing around the equals sign does not matter.
