@@ -21,6 +21,7 @@
 # # separated by equals signs.
 font-family = "Berkeley Mono"
 font-size = 26
+font-style-italic=false
 shell-integration-features=no-cursor
 theme=cyberdream
 

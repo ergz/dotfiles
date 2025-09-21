@@ -25,9 +25,12 @@ return {
     highlights = {},
   },
   {
+    "tjdevries/colorbuddy.nvim",
+  },
+  {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "cyberdream",
+      colorscheme = "gruvbuddy",
     },
   },
 }
