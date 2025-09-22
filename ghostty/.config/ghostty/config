@@ -24,6 +24,7 @@ font-size = 26
 font-style-italic=false
 shell-integration-features=no-cursor
 theme=cyberdream
+adjust-cursor-thickness=3
 
 # window-padding-x = 2
 #
