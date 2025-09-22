@@ -1,9 +1,0 @@
-[[manager.prepend_keymap]]
-on = ["<Enter>"]
-run = "enter"
-desc = "Enter the directory/open the file"
-
-[[manager.prepend_keymap]]
-on = ["<C-Enter>"]
-run = "open"
-desc = "Open the file with system handler"

@@ -1,0 +1,8 @@
+# Ignore macOS Finder metadata
+^\.DS_Store$
+
+# Ignore .git directory
+^\.git$
+
+# Ignore .gitignore files (if you don’t want them linked)
+^\.gitignore$
