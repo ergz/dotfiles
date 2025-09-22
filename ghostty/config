@@ -41,14 +41,15 @@
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 
-font-family = tx-02
-font-size = 23
+font-family="JetBrains Mono"
+font-size = 24
 
 shell-integration=bash
-shell-integration-features = no-cursor
+shell-integration-features = no-cursor, sudo
 
 theme = 0x96f
-adw-toolbar-style = raised-border
+window-padding-color = background
+adw-toolbar-style = flat
 
 keybind = alt+up=goto_split:up
 keybind = alt+down=goto_split:down
@@ -59,6 +60,6 @@ keybind = ctrl+shift+left=resize_split:left,10
 keybind = ctrl+shift+right=resize_split:right,10
 
 keybind = ctrl+shift+0=reset_font_size
-
+keybind = alt+space=unbind
 
 
