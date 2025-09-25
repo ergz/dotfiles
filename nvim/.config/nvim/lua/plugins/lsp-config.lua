@@ -11,6 +11,7 @@ return {
         ruff_lsp = false,
         clangd = {},
         gopls = false,
+        lua_ls = {},
       },
     },
   },

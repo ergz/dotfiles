@@ -4,6 +4,7 @@ return {
     lazy = false,
     priority = 1000,
     opts = {
+      palette = "anysphere",
       overrides = function(highlights, colors)
         highlights["@string.documentation.python"] = { link = "Comment" }
         -- highlights["@function.builtin.python"] = { link = "Function" }
