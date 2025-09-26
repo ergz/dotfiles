@@ -215,14 +215,21 @@ return {
       end,
       desc = "Command History",
     },
+    -- {
+    --   "<leader><space>",
+    --   function()
+    --     Snacks.picker.files()
+    --   end,
+    --   desc = "Find Files",
+    -- },
+    -- find
     {
       "<leader><space>",
       function()
-        Snacks.picker.files()
+        Snacks.picker.smart()
       end,
-      desc = "Find Files",
+      desc = "Smart Find Files",
     },
-    -- find
     {
       "<leader>fb",
       function()
