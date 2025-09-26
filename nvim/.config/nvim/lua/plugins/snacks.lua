@@ -223,6 +223,14 @@ return {
     --   desc = "Find Files",
     -- },
     -- find
+
+    {
+      "<leader>e",
+      function()
+        Snacks.explorer()
+      end,
+      desc = "File Explorer",
+    },
     {
       "<leader><space>",
       function()
