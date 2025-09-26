@@ -5,9 +5,15 @@ return {
     priority = 1000,
     opts = {
       palette = "anysphere",
-      overrides = function(highlights, colors)
-        highlights["@string.documentation.python"] = { link = "Comment" }
-        -- highlights["@function.builtin.python"] = { link = "Function" }
+      overrides = function(hl, c)
+        hl["@string.documentation.python"] = { link = "Comment" }
+
+        hl.SnacksPickerDir = { fg = c.fg_soft }
+        -- hl.SnacksPickerCursorLine = { bg = c.bg_hard }
+        -- hl.SnacksPickerBoxCursorLine = { bg = "#FFFFFF" }
+        -- hl.SnacksPickerInputCursorLine = { bg = c.bg_hard }
+        hl.SnacksPickerListCursorLine = { bg = c.bg }
+        hl.SnacksPickerPreviewCursorLine = { bg = c.bg_hard }
       end,
     },
   },
