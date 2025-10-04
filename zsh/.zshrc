@@ -26,3 +26,6 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 alias nz='nvim ~/.zshrc'
 alias sz='source ~/.zshrc'
 alias lz='lazygit'
+
+# opencode
+export PATH=/Users/erodriguez/.opencode/bin:$PATH
