@@ -9,6 +9,7 @@ return {
         ["<C-s>"] = false,
         ["<C-h>"] = { "actions.toggle_hidden", mode = "n" },
       },
+      view_options = { show_hidden = true },
     },
     -- Optional dependencies
     dependencies = { { "nvim-mini/mini.icons", opts = {} } },
