@@ -1,7 +1,5 @@
 config-file=./font-jetbrains
 font-style-italic=false
 shell-integration-features=no-cursor
-theme=cyberdream
 adjust-cursor-thickness=3
 window-decoration=auto
-macos-titlebar-style="tabs"
