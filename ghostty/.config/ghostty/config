@@ -3,6 +3,7 @@ font-style-italic=false
 shell-integration-features=no-cursor
 adjust-cursor-thickness=3
 window-decoration=auto
+macos-titlebar-style="tabs"
 
 keybind = super+left=goto_split:left
 keybind = super+right=goto_split:right
