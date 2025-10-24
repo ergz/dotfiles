@@ -4,7 +4,7 @@ return {
     lazy = false,
     priority = 1000,
     opts = {
-      palette = "anysphere",
+      palette = "default",
       overrides = function(hl, c)
         hl["@string.documentation.python"] = { link = "Comment" }
 
