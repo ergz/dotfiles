@@ -6,6 +6,8 @@ window-decoration=auto
 macos-titlebar-style="tabs"
 maximize=true
 
+custom-shader=./shaders/cursor_warp.glsl
+
 keybind = super+left=goto_split:left
 keybind = super+right=goto_split:right
 keybind = super+shift+right=resize_split:right,10
