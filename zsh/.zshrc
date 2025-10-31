@@ -10,7 +10,7 @@ setopt PROMPT_SUBST
 # Updated prompt with Git branch
 PROMPT='%F{green}%n@%m%f:%F{blue}%2~%f%F{yellow}${vcs_info_msg_0_}%f$ '
 
-export PATH="$PATH:$HOME/nvim-macos-arm64/bin:$HOME/.local/bin:$HOME/tools/fd:$HOME/tools/rg:$HOME/tools/bat:$HOME/tools/lazygit/"
+export PATH="$PATH:$HOME/nvim-macos-arm64/bin:$HOME/.local/bin:$HOME/tools/fd:$HOME/tools/rg:$HOME/tools/bat:$HOME/tools/lazygit/:$HOME/tools/fzf/"
 alias ls='ls -G'
 source <(fzf --zsh)
 export NVM_DIR="$HOME/.nvm"
@@ -26,3 +26,6 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 alias nz='nvim ~/.zshrc'
 alias sz='source ~/.zshrc'
 alias lz='lazygit'
+
+# opencode
+export PATH=$HOME/.opencode/bin:$PATH
