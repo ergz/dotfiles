@@ -1,4 +1,5 @@
 return {
+  { "ergz/colorscheme-default.nvim", lazy = false, priority = 1000 },
   {
     "ergz/hybrid.nvim",
     lazy = false,
@@ -22,7 +23,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "hybrid",
+      colorscheme = "neodef",
     },
   },
 }
