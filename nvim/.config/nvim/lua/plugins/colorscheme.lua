@@ -1,5 +1,9 @@
 return {
-  { "ergz/colorscheme-default.nvim", lazy = false, priority = 1000 },
+  {
+    "ergz/colorscheme-default.nvim",
+    lazy = false,
+    priority = 1000,
+  },
   {
     "ergz/hybrid.nvim",
     lazy = false,
