@@ -81,6 +81,7 @@ return {
           auto_close = true,
           layout = sidebar_single_border,
           watch = true,
+          hidden = true,
         },
         buffers = {
           finder = "buffers",
@@ -159,9 +160,16 @@ return {
         },
       },
       scope = {
-        underline = false,
+        underline = true,
       },
-      chunk = { enabled = false },
+      chunk = {
+        enabled = true,
+        char = {
+          arrow = "─",
+          -- corner_top = "╭",
+          -- corner_bottom = "╰",
+        },
+      },
     },
     terminal = { enabled = true },
   },
@@ -245,7 +253,10 @@ return {
     vim.api.nvim_set_hl(0, "SnacksNotifierBorderTrace", { fg = "#4F3552" })
     vim.api.nvim_set_hl(0, "SnacksNotifierFooterTrace", { fg = "#D484FF", italic = true })
 
-    vim.api.nvim_set_hl(0, "SnacksIndentScope", { fg = "#00b08d" })
+    vim.api.nvim_set_hl(0, "SnacksPickerDir", { fg = "#adadad" })
+    vim.api.nvim_set_hl(0, "SnacksPickerFile", { bold = true })
+
+    -- vim.api.nvim_set_hl(0, "SnacksIndentScope", { fg = "#00b08d" })
     -- vim.api.nvim_set_hl(0, "SnacksIndentScope", { fg = "#2b8fff" })
   end,
 }
