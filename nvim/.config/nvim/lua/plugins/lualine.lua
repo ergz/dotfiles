@@ -84,7 +84,7 @@ return {
       options = {
         section_separators = "",
         component_separators = "",
-        theme = custom_theme,
+        theme = "neodef",
       },
       sections = {
         lualine_a = { "mode" },

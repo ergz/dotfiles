@@ -7,6 +7,8 @@ macos-titlebar-style="tabs"
 maximize=true
 copy-on-select=true
 
+copy-on-select=true
+
 custom-shader=./shaders/cursor_warp.glsl
 
 keybind = super+left=goto_split:left
