@@ -5,6 +5,7 @@ adjust-cursor-thickness=3
 window-decoration=auto
 macos-titlebar-style="tabs"
 maximize=true
+copy-on-select=true
 
 custom-shader=./shaders/cursor_warp.glsl
 

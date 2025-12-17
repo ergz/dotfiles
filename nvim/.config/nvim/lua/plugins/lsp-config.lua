@@ -4,8 +4,8 @@ return {
     opts = {
       document_highlight = { enabled = false },
       servers = {
-        ty = false,
-        pyright = {},
+        ty = {},
+        pyright = false,
         ts_ls = {},
         svelte = {},
         ruff_lsp = false,
