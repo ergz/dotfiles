@@ -3,6 +3,7 @@ return {
   opts = {
     cmdline = {
       enable = true,
+      view = "cmdline",
     },
     views = {
       cmdline_popup = {

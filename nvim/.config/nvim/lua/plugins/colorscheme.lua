@@ -3,25 +3,33 @@ return {
     "ergz/colorscheme-default.nvim",
     lazy = false,
     priority = 1000,
+    name = "neodef",
+    opts = {
+      overrides = { Comment = { italic = true } },
+      mood = "default",
+    },
   },
+  -- to test locally
+  -- {
+  --   dir = "/Users/erodriguez/code/misc/colorscheme-default.nvim",
+  --   lazy = false,
+  --   priority = 1000,
+  --   name = "neodef",
+  --   opts = {
+  --     mood = "default",
+  --     overrides = {
+  --       Comment = { italic = true },
+  --     },
+  --   },
+  -- },
   {
-    "ergz/hybrid.nvim",
+    "folke/tokyonight.nvim",
     lazy = false,
     priority = 1000,
     opts = {
-      palette = "default",
-      overrides = function(hl, c)
-        hl["@string.documentation.python"] = { link = "Comment" }
-
-        -- hl.CursorLine = { bg = "#0c0c0c" }
-
-        hl.SnacksPickerDir = { fg = c.fg_soft }
-        -- hl.SnacksPickerCursorLine = { bg = c.bg_hard }
-        -- hl.SnacksPickerBoxCursorLine = { bg = "#FFFFFF" }
-        -- hl.SnacksPickerInputCursorLine = { bg = c.bg_hard }
-        -- hl.SnacksPickerListCursorLine = { bg = c.bg }
-        hl.SnacksPickerPreviewCursorLine = { bg = c.bg_hard }
-      end,
+      styles = {
+        comments = { italic = true },
+      },
     },
   },
   {

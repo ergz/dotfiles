@@ -4,7 +4,16 @@ return {
     opts = {
       document_highlight = { enabled = false },
       servers = {
-        ty = {},
+        ty = {
+          settings = {
+            ty = {
+              inlayHints = {
+                variableTypes = false,
+                callArgumentNames = false,
+              },
+            },
+          },
+        },
         pyright = false,
         ts_ls = {},
         svelte = {},
