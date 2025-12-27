@@ -9,6 +9,13 @@ return {
       mood = "default",
     },
   },
+  { "blazkowolf/gruber-darker.nvim" },
+  -- Lazy
+  {
+    "polirritmico/monokai-nightasty.nvim",
+    lazy = false,
+    priority = 1000,
+  },
   -- to test locally
   -- {
   --   dir = "/Users/erodriguez/code/misc/colorscheme-default.nvim",
