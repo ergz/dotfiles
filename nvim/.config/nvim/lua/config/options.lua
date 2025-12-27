@@ -13,3 +13,7 @@ vim.g.snacks_animate = true
 vim.g.lazyvim_picker = "snacks"
 
 -- opt.scrolloff = 999
+
+-- Window title for terminal/kitty tabs
+opt.title = true
+opt.titlestring = "nvim@%{fnamemodify(getcwd(), ':t')}"
