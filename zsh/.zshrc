@@ -29,3 +29,6 @@ alias lz='lazygit'
 
 # opencode
 export PATH=$HOME/.opencode/bin:$PATH
+
+# Amp CLI
+export PATH="/Users/erodriguez/.amp/bin:$PATH"

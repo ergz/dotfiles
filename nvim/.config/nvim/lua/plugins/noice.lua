@@ -6,9 +6,14 @@ return {
       view = "cmdline",
     },
     views = {
+      hover = {
+        border = {
+          style = "rounded",
+        },
+      },
       cmdline_popup = {
         border = {
-          style = "rounded", -- Set border style to "single"
+          style = "rounded",
           padding = { 0, 0 },
         },
       },
@@ -21,10 +26,7 @@ return {
     },
     lsp = {
       hover = {
-        ---@type NoiceViewOptions
-        opts = {
-          border = "rounded",
-        },
+        view = "hover",
       },
     },
   },
