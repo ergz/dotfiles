@@ -2,6 +2,8 @@ config-file=./font-jetbrains
 font-style-italic=false
 shell-integration-features=no-cursor
 adjust-cursor-thickness=3
+shell-integration=bash
+
 window-decoration=auto
 macos-titlebar-style="tabs"
 maximize=true
