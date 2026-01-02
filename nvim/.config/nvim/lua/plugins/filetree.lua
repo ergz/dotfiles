@@ -10,6 +10,9 @@ return {
         ["<C-h>"] = { "actions.toggle_hidden", mode = "n" },
       },
       view_options = { show_hidden = true },
+      confirmation = {
+        border = "rounded", -- Enables a rounded border for confirmations
+      },
     },
     -- Optional dependencies
     dependencies = { { "nvim-mini/mini.icons", opts = {} } },
