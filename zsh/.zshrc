@@ -10,6 +10,7 @@ path=(
   "$HOME/.bun/bin"
   "$HOME/nvim-macos-arm64/bin"
   "$HOME/.local/bin"
+  "$HOME/helix-25.07.1-aarch64-macos"
   $path
 )
 

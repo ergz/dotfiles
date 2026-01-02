@@ -16,6 +16,8 @@ return {
     lazy = false,
     priority = 1000,
   },
+  { "ergz/hybrid.nvim", lazy = false, priority = 1000, opts = { italic = { comments = false } } },
+
   -- to test locally
   -- {
   --   dir = "/Users/erodriguez/code/misc/colorscheme-default.nvim",
@@ -30,19 +32,9 @@ return {
   --   },
   -- },
   {
-    "folke/tokyonight.nvim",
-    lazy = false,
-    priority = 1000,
-    opts = {
-      styles = {
-        comments = { italic = true },
-      },
-    },
-  },
-  {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "neodef",
+      colorscheme = "hybrid",
     },
   },
 }

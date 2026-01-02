@@ -1,0 +1,8 @@
+[language-server.ty]
+command = "ty"
+args = ["server"]
+
+[[language]]
+name="python"
+language-id="python"
+language-servers=["ty"]

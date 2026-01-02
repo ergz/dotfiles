@@ -1,17 +1,19 @@
-local default_single_border = {
+local helix_style = {
   layout = {
     box = "horizontal",
     width = 0.8,
     min_width = 120,
     height = 0.8,
+    border = "single",
+    title = "{source}",
+    title_pos = "right",
     {
       box = "vertical",
-      border = "rounded",
-      title = "{title} {live} {flags}",
+      border = "none",
       { win = "input", height = 1, border = "bottom" },
       { win = "list", border = "none" },
     },
-    { win = "preview", title = "{preview}", border = "rounded", width = 0.5 },
+    { win = "preview", title = "{preview}", border = "left", width = 0.5 },
   },
 }
 
@@ -27,7 +29,7 @@ local sidebar_single_border = {
     {
       win = "input",
       height = 1,
-      border = "rounded",
+      border = "single",
       title = "{title} {live} {flags}",
       title_pos = "center",
     },
@@ -44,7 +46,7 @@ local vscode_layout_custom = {
     width = 0.4,
     min_width = 80,
     height = 0.4,
-    border = "rounded",
+    border = "single",
     box = "vertical",
     { win = "input", height = 1, border = "single", title = "{title} {live} {flags}", title_pos = "center" },
     { win = "list", border = "hpad" },
@@ -61,12 +63,16 @@ return {
     picker = {
       enabled = true,
       ui_select = true,
-      layout = {},
+      layout = helix_style,
       sources = {
-        lsp_symbols = {
-          layout = default_single_border,
+        smart = {
+          layout = helix_style,
+          icons = { files = { enabled = false } },
         },
-        grep = { layout = default_single_border },
+        lsp_symbols = {
+          layout = helix_style,
+        },
+        grep = { layout = helix_style },
         files = {
           finder = "files",
           format = "file",
@@ -75,7 +81,8 @@ return {
           ignored = true,
           follow = false,
           supports_live = true,
-          layout = default_single_border,
+          layout = helix_style,
+          icons = { files = { enabled = false } },
         },
         explorer = {
           auto_close = true,
@@ -86,7 +93,7 @@ return {
         buffers = {
           finder = "buffers",
           format = "buffer",
-          -- layout = default_single_border,
+          -- layout = helix_style,
           layout = vscode_layout_custom,
           hidden = false,
           unloaded = true,
@@ -113,9 +120,9 @@ return {
     },
     ---@type table<string, snacks.win.Config>
     styles = {
-      notification = { border = "rounded" },
-      input = { border = "rounded" },
-      notification_history = { border = "rounded" },
+      notification = { border = "single" },
+      input = { border = "single" },
+      notification_history = { border = "single" },
     },
 
     ---@class snacks.lazygit.Config: snacks.terminal.Opts
@@ -143,7 +150,7 @@ return {
       padding = false,
       style = "compact",
       win = {
-        border = "rounded",
+        border = "single",
       },
     },
     ---@class snacks.indent.Config

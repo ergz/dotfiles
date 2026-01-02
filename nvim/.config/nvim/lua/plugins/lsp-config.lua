@@ -2,6 +2,7 @@ return {
   {
     "neovim/nvim-lspconfig",
     opts = {
+      inlay_hints = { enabled = false },
       document_highlight = { enabled = false },
       servers = {
         ty = {
@@ -21,6 +22,7 @@ return {
         clangd = {},
         gopls = false,
         lua_ls = {},
+        sourcekit = {},
       },
     },
   },

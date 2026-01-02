@@ -8,18 +8,18 @@ return {
     views = {
       hover = {
         border = {
-          style = "rounded",
+          style = "single",
         },
       },
       cmdline_popup = {
         border = {
-          style = "rounded",
+          style = "single",
           padding = { 0, 0 },
         },
       },
       popupmenu = {
         border = {
-          style = "rounded",
+          style = "single",
           padding = { 0, 0 },
         },
       },
