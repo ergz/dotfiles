@@ -3,7 +3,7 @@
 from kitty.fast_data_types import Screen, get_boss
 from kitty.tab_bar import DrawData, ExtraData, TabBarData, as_rgb
 
-_MARKER = ("● ", "○ ")
+_MARKER = ("◉ ", "○ ")
 _FG_COLOR = as_rgb(0xAAAAAA)
 _ACTIVE_MARKER_COLOR = as_rgb(0xCC6666)
 
