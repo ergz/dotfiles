@@ -68,6 +68,14 @@ return {
         smart = {
           layout = helix_style,
           icons = { files = { enabled = false } },
+          win = {
+            input = {
+              keys = {
+                ["<C-h>"] = { "toggle_hidden", mode = { "i", "n" } },
+                ["<C-i>"] = { "toggle_ignored", mode = { "i", "n" } },
+              },
+            },
+          },
         },
         lsp_symbols = {
           layout = helix_style,
@@ -78,11 +86,19 @@ return {
           format = "file",
           show_empty = true,
           hidden = true,
-          ignored = true,
+          ignored = false,
           follow = false,
           supports_live = true,
           layout = helix_style,
           icons = { files = { enabled = false } },
+          win = {
+            input = {
+              keys = {
+                ["<C-h>"] = { "toggle_hidden", mode = { "i", "n" } },
+                ["<C-i>"] = { "toggle_ignored", mode = { "i", "n" } },
+              },
+            },
+          },
         },
         explorer = {
           auto_close = true,
@@ -218,6 +234,13 @@ return {
     },
     {
       "<leader><space>",
+      function()
+        Snacks.picker.files()
+      end,
+      desc = "Find Files",
+    },
+    {
+      "<leader>ss",
       function()
         Snacks.picker.smart()
       end,

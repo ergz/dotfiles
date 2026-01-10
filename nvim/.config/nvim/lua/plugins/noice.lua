@@ -3,7 +3,7 @@ return {
   opts = {
     cmdline = {
       enable = true,
-      -- view = "cmdline",
+      view = "cmdline",
     },
     views = {
       hover = {
