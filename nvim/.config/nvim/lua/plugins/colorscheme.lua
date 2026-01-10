@@ -40,7 +40,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "teide-dark",
+      colorscheme = "teide-darker",
     },
   },
 }
