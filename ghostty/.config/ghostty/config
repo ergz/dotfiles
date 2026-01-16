@@ -1,13 +1,16 @@
-config-file=./font-jetbrains
+config-file=./font-berkeley-mono
 font-style-italic=false
 shell-integration-features=no-cursor
 adjust-cursor-thickness=3
-shell-integration=bash
+shell-integration=zsh
 
 window-decoration=auto
 macos-titlebar-style="tabs"
 maximize=true
 copy-on-select = clipboard
+
+
+auto-update-channel="tip"
 
 
 custom-shader=./shaders/cursor_warp.glsl
@@ -18,6 +21,8 @@ keybind = super+shift+right=resize_split:right,10
 keybind = super+shift+left=resize_split:left,10
 keybind = super+shift+d=toggle_split_zoom
 
-command-palette-entry = title:Activate Virtual Environment,description:Activates the Python venv in .venv,action:text:source .venv/bin/activate\n
-
+# Word navigation (Linux-style)
+keybind = ctrl+left=text:\x1bb
+keybind = ctrl+right=text:\x1bf
+keybind = ctrl+backspace=text:\x17
 

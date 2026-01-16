@@ -7,7 +7,7 @@ return {
       options = {
         section_separators = "",
         component_separators = "",
-        theme = "neodef",
+        theme = "teide",
       },
       sections = {
         lualine_a = { "mode" },
