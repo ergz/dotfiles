@@ -109,7 +109,8 @@ install_fonts() {
   FONT_DIR="$HOME/.local/share/fonts/JetBrainsMono"
   if [ ! -d "$FONT_DIR" ]; then
     JB_TAG=$(gh_latest_tag "JetBrains/JetBrainsMono")
-    JB_URL="https://github.com/JetBrains/JetBrainsMono/releases/download/${JB_TAG}/JetBrainsMono-${JB_TAG}.zip"
+    JB_VER="${JB_TAG#v}"
+    JB_URL="https://github.com/JetBrains/JetBrainsMono/releases/download/${JB_TAG}/JetBrainsMono-${JB_VER}.zip"
     curl -fsSL "$JB_URL" -o "$TMP_DIR/JetBrainsMono.zip"
     mkdir -p "$FONT_DIR"
     unzip -qo "$TMP_DIR/JetBrainsMono.zip" -d "$FONT_DIR"
