@@ -105,18 +105,18 @@ install_lazygit() {
 }
 
 install_fonts() {
-  info "Installing JetBrains Mono Nerd Font..."
-  FONT_DIR="$HOME/.local/share/fonts/JetBrainsMonoNerd"
+  info "Installing JetBrains Mono..."
+  FONT_DIR="$HOME/.local/share/fonts/JetBrainsMono"
   if [ ! -d "$FONT_DIR" ]; then
-    NF_TAG=$(gh_latest_tag "ryanoasis/nerd-fonts")
-    NF_URL="https://github.com/ryanoasis/nerd-fonts/releases/download/${NF_TAG}/JetBrainsMono.tar.xz"
-    curl -fsSL "$NF_URL" -o "$TMP_DIR/JetBrainsMono.tar.xz"
+    JB_TAG=$(gh_latest_tag "JetBrains/JetBrainsMono")
+    JB_URL="https://github.com/JetBrains/JetBrainsMono/releases/download/${JB_TAG}/JetBrainsMono-${JB_TAG}.zip"
+    curl -fsSL "$JB_URL" -o "$TMP_DIR/JetBrainsMono.zip"
     mkdir -p "$FONT_DIR"
-    tar xJf "$TMP_DIR/JetBrainsMono.tar.xz" -C "$FONT_DIR"
+    unzip -qo "$TMP_DIR/JetBrainsMono.zip" -d "$FONT_DIR"
     fc-cache -f "$FONT_DIR"
-    ok "JetBrains Mono Nerd Font $NF_TAG"
+    ok "JetBrains Mono $JB_TAG"
   else
-    ok "JetBrains Mono Nerd Font (already installed)"
+    ok "JetBrains Mono (already installed)"
   fi
 }
 
