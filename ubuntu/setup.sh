@@ -93,6 +93,17 @@ install_bat() {
   ok "bat $BAT_TAG"
 }
 
+install_tre() {
+  info "Installing tre..."
+  TRE_TAG=$(gh_latest_tag "dduan/tre")
+  TRE_VER="${TRE_TAG#v}"
+  TRE_URL="https://github.com/dduan/tre/releases/download/${TRE_TAG}/tre-${TRE_VER}-x86_64-unknown-linux-musl.tar.gz"
+  curl -fsSL "$TRE_URL" -o "$TMP_DIR/tre.tar.gz"
+  tar xzf "$TMP_DIR/tre.tar.gz" -C "$TMP_DIR"
+  install -m 755 "$TMP_DIR/tre" "$LOCAL_BIN/tre"
+  ok "tre $TRE_TAG"
+}
+
 install_lazygit() {
   info "Installing lazygit..."
   LG_TAG=$(gh_latest_tag "jesseduffield/lazygit")
@@ -172,6 +183,7 @@ install_all() {
   install_fd
   install_ripgrep
   install_bat
+  install_tre
   install_lazygit
   install_fonts
   install_kitty
@@ -192,7 +204,7 @@ install_all() {
 # ---------------------------------------------------------------------------
 # CLI
 # ---------------------------------------------------------------------------
-AVAILABLE="apt, nvim, fzf, fd, ripgrep, bat, lazygit, fonts, kitty, nvm, uv, r, stow"
+AVAILABLE="apt, nvim, fzf, fd, ripgrep, bat, tre, lazygit, fonts, kitty, nvm, uv, r, stow"
 
 if [ $# -eq 0 ]; then
   install_all
@@ -205,6 +217,7 @@ else
       fd)      install_fd ;;
       ripgrep) install_ripgrep ;;
       bat)     install_bat ;;
+      tre)     install_tre ;;
       lazygit) install_lazygit ;;
       fonts)   install_fonts ;;
       kitty)   install_kitty ;;
