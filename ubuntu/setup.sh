@@ -96,8 +96,7 @@ install_bat() {
 install_tre() {
   info "Installing tre..."
   TRE_TAG=$(gh_latest_tag "dduan/tre")
-  TRE_VER="${TRE_TAG#v}"
-  TRE_URL="https://github.com/dduan/tre/releases/download/${TRE_TAG}/tre-${TRE_VER}-x86_64-unknown-linux-musl.tar.gz"
+  TRE_URL="https://github.com/dduan/tre/releases/download/${TRE_TAG}/tre-${TRE_TAG}-x86_64-unknown-linux-musl.tar.gz"
   curl -fsSL "$TRE_URL" -o "$TMP_DIR/tre.tar.gz"
   tar xzf "$TMP_DIR/tre.tar.gz" -C "$TMP_DIR"
   install -m 755 "$TMP_DIR/tre" "$LOCAL_BIN/tre"
