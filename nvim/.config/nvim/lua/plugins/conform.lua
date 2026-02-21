@@ -4,10 +4,11 @@ return {
     opts = {
       formatters_by_ft = {
         python = { "ruff_format" },
-        javascript = { "prettierd" },
-        typescript = { "prettierd" },
-        typescriptreact = { "prettierd" }, -- Add this line for TSX files
-        javascriptreact = { "prettierd" }, -- Optionally add this for JSX files
+        javascript = { "oxfmt" },
+        typescript = { "oxfmt" },
+        -- svelte = { "oxfmt" },
+        typescriptreact = { "oxfmt" }, -- Add this line for TSX files
+        javascriptreact = { "oxfmt" }, -- Optionally add this for JSX files
         terraform = { "terraform_fmt" },
         tf = { "terraform_fmt" },
         lua = { "stylua" },

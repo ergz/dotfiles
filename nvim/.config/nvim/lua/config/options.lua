@@ -6,6 +6,8 @@
 
 local opt = vim.opt
 
+opt.guicursor = "n-v-c:block,i-ci-ve:ver40,r-cr:hor20,o:hor50"
+
 opt.relativenumber = false
 vim.opt.conceallevel = 0
 opt.clipboard = "unnamedplus"

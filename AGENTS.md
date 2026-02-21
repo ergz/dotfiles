@@ -1,8 +1,6 @@
 # Development & Deployment
 - **Install/Deploy**: `stow -t ~ <package_name>` (e.g., `stow -t ~ nvim`).
 - **Structure**: Each top-level directory is a package. Inside, mirror the path relative to `$HOME`.
-- **Linting (Lua)**: Use `stylua`. Config: 2 spaces indent, 120 column width.
-  - Run: `stylua .` inside `nvim/.config/nvim`.
 
 # Code Style & Conventions
 - **Lua/Neovim**: Follow LazyVim patterns.

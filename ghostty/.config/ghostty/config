@@ -1,8 +1,8 @@
-config-file=./font-berkeley-mono
+config-file=./font-jetbrains
 font-style-italic=false
 shell-integration-features=no-cursor
 adjust-cursor-thickness=3
-shell-integration=zsh
+#shell-integration=zsh
 
 window-decoration=auto
 macos-titlebar-style="tabs"
