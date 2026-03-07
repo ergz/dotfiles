@@ -1,7 +1,7 @@
 // -- CONFIGURATION --
-vec4 TRAIL_COLOR = iCurrentCursorColor; // can change to eg: vec4(0.2, 0.6, 1.0, 0.5);
-const float DURATION = 0.09; // in seconds
-const float MAX_TRAIL_LENGTH = 0.2;
+vec4 TRAIL_COLOR = vec4(0.8, 0.267, 0.0, 0.7); // #CC4400 blood orange (kitty)
+const float DURATION = 0.15; // in seconds (matches kitty decay)
+const float MAX_TRAIL_LENGTH = 0.3; // longer trail (kitty cursor_trail 3)
 const float THRESHOLD_MIN_DISTANCE = 1.5; // min distance to show trail (units of cursor width)
 const float BLUR = 2.0; // blur size in pixels (for antialiasing)
 

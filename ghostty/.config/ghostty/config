@@ -1,4 +1,5 @@
 config-file=./font-jetbrains
+theme = Teide
 font-style-italic=false
 shell-integration-features=no-cursor
 adjust-cursor-thickness=3
@@ -13,7 +14,7 @@ copy-on-select = clipboard
 auto-update-channel="tip"
 
 
-custom-shader=./shaders/cursor_warp.glsl
+#custom-shader=./shaders/cursor_tail.glsl
 
 keybind = super+left=goto_split:left
 keybind = super+right=goto_split:right
