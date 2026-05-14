@@ -1,54 +1,76 @@
--- Keymaps are automatically loaded on the VeryLazy event
--- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
+local map = vim.keymap.set
+local root = require("config.root")
 
-local map = LazyVim.safe_keymap_set
+-- Buffer navigation & file management
+map("n", "<A-[>", "<cmd>bprevious<cr>", { desc = "Previous buffer" })
+map("n", "<A-]>", "<cmd>bnext<cr>", { desc = "Next buffer" })
+map("n", "<leader>dd", "<cmd>bd<cr>", { desc = "Delete buffer" })
+map("n", "-", "<cmd>Oil<cr>", { desc = "Open parent directory" })
+map("n", "<C-s>", "<cmd>w<cr>", { desc = "Save file" })
+map({ "i", "v", "x" }, "<C-s>", "<Esc><cmd>w<cr>", { desc = "Save file" })
 
--- Delete default keymaps
-vim.keymap.del("n", "[B")
-vim.keymap.del("n", "]B")
+-- Text editing
+map("v", "<Tab>", ">gv", { desc = "Indent selection" })
+map("v", "<S-Tab>", "<gv", { desc = "Outdent selection" })
+map("n", "<Tab>", ">>", { desc = "Indent line" })
+map("n", "<S-Tab>", "<<", { desc = "Outdent line" })
 
---- Buffer Navigation & File Management
-vim.keymap.set("n", "<A-[>", ":bprevious<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<A-]>", ":bnext<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>dd", ":bd<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+map("n", "<C-D>", "<cmd>t.<cr>", { desc = "Duplicate line" })
+map("v", "<C-D>", "y'>p", { desc = "Duplicate selection" })
 
---- Text Editing
--- Indentation
-vim.api.nvim_set_keymap("v", "<Tab>", ">gv", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("v", "<S-Tab>", "<gv", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<Tab>", ">>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<S-Tab>", "<<", { noremap = true, silent = true })
+map("n", "<A-j>", "<cmd>m .+1<cr>==", { desc = "Move line down" })
+map("v", "<A-j>", ":m '>+1<cr>gv=gv", { desc = "Move selection down" })
+map("n", "<A-k>", "<cmd>m .-2<cr>==", { desc = "Move line up" })
+map("v", "<A-k>", ":m '<-2<cr>gv=gv", { desc = "Move selection up" })
 
--- Duplicate lines
-vim.api.nvim_set_keymap("n", "<C-D>", ":t.<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("v", "<C-D>", "y'>p", { noremap = true, silent = true })
+map("n", "<D-j>", "<cmd>m .+1<cr>==", { desc = "Move line down" })
+map("v", "<D-j>", ":m '>+1<cr>gv=gv", { desc = "Move selection down" })
+map("n", "<D-k>", "<cmd>m .-2<cr>==", { desc = "Move line up" })
+map("v", "<D-k>", ":m '<-2<cr>gv=gv", { desc = "Move selection up" })
 
--- Move lines (Alt)
-vim.api.nvim_set_keymap("n", "<A-j>", ":m .+1<CR>==", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("v", "<A-j>", ":m '>+1<CR>gv=gv", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<A-k>", ":m .-2<CR>==", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("v", "<A-k>", ":m '<-2<CR>gv=gv", { noremap = true, silent = true })
+map("n", "dd", '"_dd', { desc = "Delete line without copying" })
+map("x", "d", '"_d', { desc = "Delete selection without copying" })
 
--- Move lines (Mac Cmd)
-vim.api.nvim_set_keymap("n", "<D-j>", ":m .+1<CR>==", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("v", "<D-j>", ":m '>+1<CR>gv=gv", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<D-k>", ":m .-2<CR>==", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("v", "<D-k>", ":m '<-2<CR>gv=gv", { noremap = true, silent = true })
+-- Diagnostics
+map("n", "<leader>ll", vim.diagnostic.open_float, { desc = "Line diagnostics" })
 
--- Delete without copying
-vim.keymap.set("n", "dd", '"_dd', { noremap = true, desc = "Delete line without copying" })
-vim.keymap.set("x", "d", '"_d', { noremap = true, desc = "Delete selection without copying" })
-
---- Tools & Diagnostics
--- Terminal
-vim.keymap.set({ "n", "t" }, "<c-\\>", function()
+-- Snacks-powered UI
+map({ "n", "t" }, "<c-\\>", function()
   Snacks.terminal.toggle()
-end, { desc = "Toggle Terminal" })
+end, { desc = "Toggle terminal" })
 
--- Float diagnostics
-vim.api.nvim_set_keymap("n", "<leader>ll", ":lua vim.diagnostic.open_float()<CR>", { noremap = true, silent = true })
+map({ "n", "t" }, "<D-\\>", function()
+  Snacks.picker.explorer({ cwd = root.get() })
+end, { desc = "Explorer root" })
 
---- Disabled Keys
-vim.keymap.set("v", "u", "<Nop>", { silent = true }) -- Disable undo in visual
-vim.keymap.set("n", "q", "<Nop>", { noremap = true, silent = true }) -- Disable macros
+map({ "n", "t" }, "<A-\\>", function()
+  Snacks.picker.explorer({ cwd = root.get() })
+end, { desc = "Explorer root" })
+
+map("n", "<leader>e", function()
+  Snacks.explorer()
+end, { desc = "File explorer" })
+
+map("n", "<leader>p", function()
+  Snacks.picker.buffers()
+end, { desc = "Buffers" })
+
+map("n", "<C-p>", function()
+  Snacks.picker.buffers()
+end, { desc = "Buffers" })
+
+map("n", "<leader><space>", function()
+  Snacks.picker.files()
+end, { desc = "Find files" })
+
+map("n", "<leader>ss", function()
+  Snacks.picker.smart()
+end, { desc = "Smart find" })
+
+map("n", "<leader>fc", function()
+  Snacks.picker.files({ cwd = vim.fn.stdpath("config") })
+end, { desc = "Find config file" })
+
+-- Disabled keys
+map("v", "u", "<Nop>", { silent = true })
+map("n", "q", "<Nop>", { silent = true })
