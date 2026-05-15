@@ -61,12 +61,16 @@ map("n", "<C-p>", function()
 end, { desc = "Buffers" })
 
 map("n", "<leader><space>", function()
-  Snacks.picker.files()
-end, { desc = "Find files" })
-
-map("n", "<leader>ss", function()
   Snacks.picker.smart()
 end, { desc = "Smart find" })
+
+map("n", "<leader>ss", function()
+  Snacks.picker.lsp_symbols()
+end, { desc = "LSP Symbols" })
+
+map("n", "<leader>sS", function()
+  Snacks.picker.lsp_workspace_symbols()
+end, { desc = "LSP Workspace Symbols" })
 
 map("n", "<leader>fc", function()
   Snacks.picker.files({ cwd = vim.fn.stdpath("config") })
