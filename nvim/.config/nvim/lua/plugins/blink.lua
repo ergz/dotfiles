@@ -1,5 +1,5 @@
 require("blink.cmp").setup({
-  keymap = { preset = "default" },
+  keymap = { preset = "enter" },
   completion = { documentation = { auto_show = true } },
   fuzzy = { implementation = "lua" },
 })

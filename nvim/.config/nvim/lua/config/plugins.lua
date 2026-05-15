@@ -16,6 +16,7 @@ vim.pack.add({
   { src = "https://github.com/folke/todo-comments.nvim" },
   { src = "https://github.com/nvim-lua/plenary.nvim" },
   { src = "https://github.com/nvim-mini/mini.icons" },
+  { src = "https://github.com/nvim-mini/mini.pairs" },
   { src = "https://github.com/serhez/teide.nvim" },
 })
 
@@ -26,6 +27,7 @@ require("plugins.conform")
 require("plugins.gitsigns")
 require("plugins.treesitter")
 require("plugins.blink")
+require("plugins.mini_pairs")
 require("plugins.lualine")
 require("plugins.which_key")
 require("plugins.todo_comments")

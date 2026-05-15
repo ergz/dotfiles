@@ -45,6 +45,13 @@ require("snacks").setup({
   indent = {
     enabled = true,
     indent = { char = "│" },
+    animate = {
+      style = "out",
+      easing = "linear",
+      duration = {
+        total = 200,
+      },
+    },
     scope = { underline = true },
     chunk = { enabled = true, char = { arrow = "─" } },
   },

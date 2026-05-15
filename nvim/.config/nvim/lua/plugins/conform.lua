@@ -11,6 +11,14 @@ require("conform").setup({
     tf = { "terraform_fmt" },
     lua = { "stylua" },
   },
+  format_on_save = {
+    timeout_ms = 1000,
+    lsp_format = "fallback",
+  },
   notify_on_error = true,
   log_level = vim.log.levels.ERROR,
 })
+
+vim.keymap.set({ "n", "v" }, "<leader>cf", function()
+  require("conform").format({ async = true, lsp_format = "fallback" })
+end, { desc = "Format" })
