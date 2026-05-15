@@ -6,9 +6,9 @@ end
 vim.g.colors_name = "cursor_dark"
 
 local p = {
-	bg = "#181818",
-	bg_dark = "#141414",
-	bg_highlight = "#262626",
+	bg = "#1D2228",
+	bg_dark = "#161A1E",
+	bg_highlight = "#262B31",
 	bg_selection = "#404040",
 	fg = "#E4E4E4",
 	fg_muted = "#A4A4A4",
