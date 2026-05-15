@@ -4,6 +4,7 @@ local root = require("config.root")
 -- Buffer navigation & file management
 map("n", "<A-[>", "<cmd>bprevious<cr>", { desc = "Previous buffer" })
 map("n", "<A-]>", "<cmd>bnext<cr>", { desc = "Next buffer" })
+map("n", "<leader>`", "<cmd>b#<cr>", { desc = "Switch to other buffer" })
 map("n", "<leader>dd", "<cmd>bd<cr>", { desc = "Delete buffer" })
 map("n", "-", "<cmd>Oil<cr>", { desc = "Open parent directory" })
 map("n", "<C-s>", "<cmd>w<cr>", { desc = "Save file" })
