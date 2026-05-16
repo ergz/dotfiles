@@ -64,6 +64,14 @@ map("n", "<leader><space>", function()
   Snacks.picker.smart()
 end, { desc = "Smart find" })
 
+map("n", "<leader>/", function()
+  Snacks.picker.grep({ cwd = root.get() })
+end, { desc = "Grep root" })
+
+map("n", "<leader>sb", function()
+  Snacks.picker.lines()
+end, { desc = "Buffer lines" })
+
 map("n", "<leader>ss", function()
   Snacks.picker.lsp_symbols()
 end, { desc = "LSP Symbols" })
