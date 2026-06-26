@@ -33,7 +33,16 @@ map("n", "dd", '"_dd', { desc = "Delete line without copying" })
 map("x", "d", '"_d', { desc = "Delete selection without copying" })
 
 -- Diagnostics
-map("n", "<leader>ll", vim.diagnostic.open_float, { desc = "Line diagnostics" })
+local line_diagnostics = function()
+  vim.diagnostic.open_float({ border = "single", scope = "line" })
+end
+
+map("n", "<leader>ll", line_diagnostics, { desc = "Line diagnostics" })
+map("n", "<leader>cd", line_diagnostics, { desc = "Line diagnostics" })
+map("n", "<leader>xx", "<cmd>Trouble diagnostics toggle<cr>", { desc = "Diagnostics (Trouble)" })
+map("n", "<leader>xX", "<cmd>Trouble diagnostics toggle filter.buf=0<cr>", { desc = "Buffer diagnostics (Trouble)" })
+map("n", "<leader>xL", "<cmd>Trouble loclist toggle<cr>", { desc = "Location list (Trouble)" })
+map("n", "<leader>xQ", "<cmd>Trouble qflist toggle<cr>", { desc = "Quickfix list (Trouble)" })
 
 -- Snacks-powered UI
 map({ "n", "t" }, "<c-\\>", function()

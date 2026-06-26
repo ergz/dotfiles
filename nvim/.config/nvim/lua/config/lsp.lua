@@ -19,8 +19,14 @@ vim.api.nvim_create_autocmd("LspAttach", {
     end
 
     map("gd", vim.lsp.buf.definition, "Goto Definition")
+    map("<leader>gd", vim.lsp.buf.definition, "Goto Definition")
     map("gD", vim.lsp.buf.declaration, "Goto Declaration")
-    map("gr", vim.lsp.buf.references, "References")
+    map("gr", function()
+      Snacks.picker.lsp_references()
+    end, "References")
+    map("<leader>gr", function()
+      Snacks.picker.lsp_references()
+    end, "References")
     map("gi", vim.lsp.buf.implementation, "Goto Implementation")
     map("K", function()
       vim.lsp.buf.hover({ border = "single" })

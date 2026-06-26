@@ -1,34 +1,11 @@
-local helix_layout = {
-  layout = {
-    box = "horizontal",
-    width = 0.8,
-    min_width = 120,
-    height = 0.8,
-    border = "single",
-    title = "{source}",
-    title_pos = "right",
-    {
-      box = "vertical",
-      border = "none",
-      { win = "input", height = 1, border = "bottom" },
-      { win = "list", border = "none" },
-    },
-    { win = "preview", title = "{preview}", border = "left", width = 0.5 },
-  },
-}
-
 require("snacks").setup({
   picker = {
     enabled = true,
     ui_select = true,
-    layout = helix_layout,
     sources = {
-      files = { hidden = true, ignored = false, layout = helix_layout, icons = { files = { enabled = false } } },
-      smart = { layout = helix_layout, icons = { files = { enabled = false } } },
-      grep = { layout = helix_layout },
-      lsp_symbols = { layout = helix_layout },
+      files = { hidden = true, ignored = false, icons = { files = { enabled = false } } },
+      smart = { icons = { files = { enabled = false } } },
       buffers = {
-        layout = helix_layout,
         current = false,
         sort_lastused = true,
         win = {
@@ -55,7 +32,14 @@ require("snacks").setup({
     scope = { underline = true },
     chunk = { enabled = true, char = { arrow = "─" } },
   },
-  terminal = { enabled = true },
+  terminal = {
+    enabled = true,
+    win = {
+      position = "right",
+      width = 0.4,
+      height = 0,
+    },
+  },
   lazygit = {
     theme = {
       selectedLineBgColor = { bg = "Normal", bold = false },
@@ -70,3 +54,16 @@ require("snacks").setup({
     notification_history = { border = "single" },
   },
 })
+
+local picker_border = "#81A2BE"
+for _, group in ipairs({
+  "SnacksPickerBorder",
+  "SnacksPickerBoxBorder",
+  "SnacksPickerInputBorder",
+  "SnacksPickerListBorder",
+  "SnacksPickerPreviewBorder",
+}) do
+  vim.api.nvim_set_hl(0, group, { fg = picker_border })
+end
+
+vim.api.nvim_set_hl(0, "SnacksPickerTitle", { fg = "#F0C674", bold = true })

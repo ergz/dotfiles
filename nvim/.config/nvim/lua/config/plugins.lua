@@ -14,6 +14,7 @@ vim.pack.add({
   { src = "https://github.com/nvim-lualine/lualine.nvim" },
   { src = "https://github.com/folke/which-key.nvim" },
   { src = "https://github.com/folke/todo-comments.nvim" },
+  { src = "https://github.com/folke/trouble.nvim" },
   { src = "https://github.com/nvim-lua/plenary.nvim" },
   { src = "https://github.com/nvim-mini/mini.icons" },
   { src = "https://github.com/nvim-mini/mini.pairs" },
@@ -31,3 +32,4 @@ require("plugins.mini_pairs")
 require("plugins.lualine")
 require("plugins.which_key")
 require("plugins.todo_comments")
+require("plugins.trouble")
