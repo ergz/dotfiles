@@ -1,1 +1,1 @@
-vim.cmd.colorscheme("tomorrow_night")
+vim.cmd.colorscheme("dark_2026")

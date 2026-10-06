@@ -55,15 +55,18 @@ require("snacks").setup({
   },
 })
 
-local picker_border = "#81A2BE"
-for _, group in ipairs({
-  "SnacksPickerBorder",
-  "SnacksPickerBoxBorder",
-  "SnacksPickerInputBorder",
-  "SnacksPickerListBorder",
-  "SnacksPickerPreviewBorder",
-}) do
-  vim.api.nvim_set_hl(0, group, { fg = picker_border })
-end
+-- Dark 2026 supplies its own picker colors in colors/dark_2026.lua.
+if vim.g.colors_name ~= "dark_2026" then
+  local picker_border = "#81A2BE"
+  for _, group in ipairs({
+    "SnacksPickerBorder",
+    "SnacksPickerBoxBorder",
+    "SnacksPickerInputBorder",
+    "SnacksPickerListBorder",
+    "SnacksPickerPreviewBorder",
+  }) do
+    vim.api.nvim_set_hl(0, group, { fg = picker_border })
+  end
 
-vim.api.nvim_set_hl(0, "SnacksPickerTitle", { fg = "#F0C674", bold = true })
+  vim.api.nvim_set_hl(0, "SnacksPickerTitle", { fg = "#F0C674", bold = true })
+end
