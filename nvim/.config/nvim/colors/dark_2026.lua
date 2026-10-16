@@ -30,6 +30,10 @@ local p = {
   purple = "#D2A8FF",
   green = "#7EE787",
   string = "#A5D6FF",
+  -- Inherited from Dark+ via dark_modern.json.
+  teal = "#4EC9B0",
+  pink = "#C586C0",
+  keyword_blue = "#569CD6",
   invalid = "#FFA198",
   error = "#F48771",
   warning = "#E5BA7D",
@@ -130,15 +134,21 @@ hl("Underlined", { fg = p.string, underline = true })
 hl("Error", { fg = p.invalid, italic = true })
 hl("Todo", { fg = p.warning, bold = true })
 
+-- Dark+ layer that 2026 Dark inherits for types, control flow, and word operators.
+hl("Structure", { fg = p.teal })
+hl("Conditional", { fg = p.pink })
+hl("Repeat", { fg = p.pink })
+hl("Exception", { fg = p.pink })
+hl("Include", { fg = p.pink })
+
 local links = {
   ["@variable"] = "Identifier",
   ["@variable.builtin"] = "Constant",
-  ["@variable.parameter"] = "Identifier",
   ["@variable.member"] = "Identifier",
   ["@constant"] = "Constant",
   ["@constant.builtin"] = "Constant",
   ["@constant.macro"] = "Constant",
-  ["@module"] = "Type",
+  ["@module"] = "Structure",
   ["@module.builtin"] = "Special",
   ["@label"] = "Type",
   ["@string"] = "String",
@@ -151,9 +161,9 @@ local links = {
   ["@number"] = "Number",
   ["@number.float"] = "Number",
   ["@boolean"] = "Boolean",
-  ["@type"] = "Type",
-  ["@type.builtin"] = "Keyword",
-  ["@type.definition"] = "Type",
+  ["@type"] = "Structure",
+  ["@type.builtin"] = "Structure",
+  ["@type.definition"] = "Structure",
   ["@attribute"] = "Type",
   ["@attribute.builtin"] = "Special",
   ["@property"] = "Identifier",
@@ -163,9 +173,16 @@ local links = {
   ["@function.macro"] = "Function",
   ["@function.method"] = "Function",
   ["@function.method.call"] = "Function",
-  ["@constructor"] = "Type",
+  ["@constructor"] = "Structure",
   ["@operator"] = "Operator",
   ["@keyword"] = "Keyword",
+  ["@keyword.conditional"] = "Conditional",
+  ["@keyword.conditional.ternary"] = "Conditional",
+  ["@keyword.repeat"] = "Repeat",
+  ["@keyword.return"] = "Conditional",
+  ["@keyword.exception"] = "Exception",
+  ["@keyword.import"] = "Include",
+  ["@keyword.coroutine"] = "Conditional",
   ["@punctuation.delimiter"] = "Delimiter",
   ["@punctuation.bracket"] = "Delimiter",
   ["@punctuation.special"] = "SpecialChar",
@@ -202,6 +219,8 @@ hl("@markup.italic", { fg = p.variable, italic = true })
 hl("@markup.strikethrough", { strikethrough = true })
 hl("@markup.underline", { underline = true })
 hl("@string.escape.regex", { fg = p.green, bold = true })
+hl("@variable.parameter", { fg = p.orange })
+hl("@keyword.operator", { fg = p.keyword_blue })
 
 -- Keep language-server semantic tokens consistent with the syntax palette.
 local semantic_links = {
@@ -212,9 +231,6 @@ local semantic_links = {
   interface = "@type",
   struct = "@type",
   typeParameter = "@type",
-  parameter = "@variable.parameter",
-  variable = "@variable",
-  property = "@variable.member",
   enumMember = "@constant",
   event = "@type",
   ["function"] = "@function",
@@ -232,6 +248,11 @@ local semantic_links = {
 for token, target in pairs(semantic_links) do
   hl("@lsp.type." .. token, { link = target })
 end
+-- Generic tokens defer to Treesitter, which distinguishes calls and constructors better.
+for _, token in ipairs({ "variable", "property", "parameter" }) do
+  hl("@lsp.type." .. token, {})
+end
+hl("@lsp.type.selfParameter", { link = "Identifier" })
 hl("@lsp.typemod.variable.readonly", { link = "Constant" })
 hl("@lsp.typemod.variable.defaultLibrary", { link = "Special" })
 hl("@lsp.typemod.function.defaultLibrary", { link = "Special" })
@@ -308,6 +329,9 @@ hl("BlinkCmpGhostText", { fg = p.disabled })
 hl("OilDir", { link = "Directory" })
 hl("OilFile", { fg = p.ui })
 hl("OilLink", { fg = p.link })
+hl("RainbowDelimiterYellow", { fg = "#FFD700" })
+hl("RainbowDelimiterViolet", { fg = "#DA70D6" })
+hl("RainbowDelimiterBlue", { fg = "#179FFF" })
 hl("WhichKey", { fg = p.blue })
 hl("WhichKeyGroup", { fg = p.purple })
 hl("WhichKeyDesc", { fg = p.ui })

@@ -19,6 +19,7 @@ vim.pack.add({
   { src = "https://github.com/nvim-mini/mini.icons" },
   { src = "https://github.com/nvim-mini/mini.pairs" },
   { src = "https://github.com/serhez/teide.nvim" },
+  { src = "https://github.com/HiPhish/rainbow-delimiters.nvim" },
 })
 
 require("plugins.colorscheme")
@@ -27,6 +28,7 @@ require("plugins.oil")
 require("plugins.conform")
 require("plugins.gitsigns")
 require("plugins.treesitter")
+require("plugins.rainbow_delimiters")
 require("plugins.blink")
 require("plugins.mini_pairs")
 require("plugins.lualine")
