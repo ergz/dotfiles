@@ -1,4 +1,5 @@
 require("config.options")
+require("config.neovide")
 require("config.autocmds")
 require("config.plugins")
 require("config.lsp")

@@ -34,3 +34,5 @@ alias conda-start='eval "$(${CONDA_ROOT}/bin/conda shell.zsh hook)"'
 alias nz='nvim ~/.zshrc'
 alias sz='source ~/.zshrc'
 alias lz='lazygit'
+alias vimr='"/Applications/VimR 2.app/Contents/Resources/vimr" --cur-env'
+alias neovide="/Applications/Neovide.app/Contents/MacOS/neovide --fork"
