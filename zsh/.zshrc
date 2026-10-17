@@ -36,3 +36,4 @@ alias sz='source ~/.zshrc'
 alias lz='lazygit'
 alias vimr='"/Applications/VimR 2.app/Contents/Resources/vimr" --cur-env'
 alias neovide="/Applications/Neovide.app/Contents/MacOS/neovide --fork"
+alias vide="neovide"
